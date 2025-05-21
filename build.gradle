@@ -19,10 +19,10 @@ allprojects {
 apply plugin: 'org.xtext.xtend'
 
 dependencies {
-  compile project(':Xtendroid')
-  compile project(':XtendroidTest')
-  compile project(':Sample1')
-  compile project(':HelloWorld')
-  compile project(':HandlerExample')
-  compile project(':MovieSearchApp')
+  implementation project(':Xtendroid')
+  implementation project(':XtendroidTest')
+  implementation project(':Sample1')
+  implementation project(':HelloWorld')
+  implementation project(':HandlerExample')
+  implementation project(':MovieSearchApp')
 }
