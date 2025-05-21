@@ -1,6 +1,13 @@
 buildscript {scriptHandler->
     apply from: 'repositories.gradle', to: scriptHandler
     apply from: 'dependencies.gradle'
+
+    repositories {
+        gradlePluginPortal()
+        jcenter()
+        google()
+    }
+
     dependencies {
         classpath(project.ext.build.xtend_android_gradle)
         classpath(project.ext.build.xtext_gradle)
@@ -12,6 +19,8 @@ buildscript {scriptHandler->
 allprojects {
   repositories {
     maven { url System.getenv('ANDROID_HOME') + "/extras/android/m2repository" }
+    google()
+    gradlePluginPortal()
     mavenCentral()
     mavenLocal()
     jcenter()
