@@ -1,9 +1,18 @@
 buildscript {scriptHandler->
     apply from: '../../repositories.gradle', to: scriptHandler
     apply from: '../../dependencies.gradle'
+
+    repositories {
+        gradlePluginPortal()
+        jcenter()
+        google()
+    }
+
     dependencies {
         classpath(project.ext.build.xtend_android_gradle)
         classpath(project.ext.build.xtext_gradle)
+        classpath 'com.android.tools.build:gradle:8.10.0'
+        classpath 'org.xtext.xtend:org.xtext.xtend.gradle.plugin:4.0.0'
     }
 }
 
