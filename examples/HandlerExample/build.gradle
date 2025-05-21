@@ -33,7 +33,7 @@ dependencies {
 }
 
 android {
-  compileSdk(project.ext.compileSdk)
+  compileSdk 35
   compileSdkVersion(project.ext.compileSdkVersion)
   buildToolsVersion(project.ext.buildToolsVersion)
 
