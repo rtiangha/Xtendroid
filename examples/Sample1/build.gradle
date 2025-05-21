@@ -21,11 +21,11 @@ apply plugin: 'org.xtext.android.xtend'
 apply from: '../../dependencies.gradle'
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile(project.ext.lib.xtend)
-  compile(project.ext.lib.android.support_v4)
-  compile(project.ext.lib.android.appcompat_v7)
-  compile project(':Xtendroid')
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation(project.ext.lib.xtend)
+  implementation(project.ext.lib.android.support_v4)
+  implementation(project.ext.lib.android.appcompat_v7)
+  implementation project(':Xtendroid')
 }
 
 repositories {
@@ -33,6 +33,7 @@ repositories {
 }
 
 android {
+  compileSdk(project.ext.compileSdk)
   compileSdkVersion(project.ext.compileSdkVersion)
   buildToolsVersion(project.ext.buildToolsVersion)
 

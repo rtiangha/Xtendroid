@@ -24,6 +24,7 @@ dependencies {
 }
 
 android {
+    compileSdk(project.ext.compileSdk)
     compileSdkVersion(project.ext.compileSdkVersion)
     buildToolsVersion(project.ext.buildToolsVersion)
 
